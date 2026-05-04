@@ -5,7 +5,7 @@ const errorHandler = (err, req, res, next) => {
     return res.status(204).send();
   }
 
-  console.error(err.stack);
+  console.error(err);
 
   // Prisma Unique Constraint Error
   if (err.code === 'P2002') {
